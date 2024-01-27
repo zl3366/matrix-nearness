@@ -1,3 +1,12 @@
+import timeit
+import cvxpy as cp
+import numpy as np
+from scipy.linalg import polar
+import numpy.linalg as la
+import matplotlib.pyplot as plt
+import pickle
+
+
 def generate_random_orthogonal(n): 
     U, _ = la.qr((np.random.rand(n, n) - 5.) * 200)
     return U
